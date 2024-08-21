@@ -11,9 +11,11 @@ extension ContextExt on BuildContext {
 
   NavigatorState get nav => Navigator.of(this);
 
-  void pushNamed(String routeName, [Object? argument]) =>
+  void pushNamed(String routeName, {Object? argument}) =>
       nav.pushNamed(routeName, arguments: argument);
-  void pushReplacementNamed(String routeName) =>
-      nav.pushReplacementNamed(routeName);
+
+  void pushReplacementNamed(String routeName, {Object? argument}) =>
+      nav.pushReplacementNamed(routeName, arguments: argument);
+
   void pop() => nav.pop();
 }

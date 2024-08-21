@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:medhub/routes/routes.dart';
-import 'package:medhub/routes/routes_name.dart';
-import 'package:medhub/utils/theme.dart';
+import 'package:medhub/core/routes/routes.dart';
+import 'package:medhub/core/routes/routes_name.dart';
+import 'package:medhub/core/utils/theme.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:medhub/src/on_boarding/bloc/on_boarding_bloc.dart';
 
-Future<void> main() async {
+void main() {
   runApp(
-    const MyApp(),
+    MultiBlocProvider(
+      providers: [
+        BlocProvider(create: (_) => OnBoardingBloc()),
+      ],
+      child: const MyApp(),
+    ),
   );
 }
 
@@ -18,7 +25,7 @@ class MyApp extends StatelessWidget {
       title: 'MedHub',
       debugShowCheckedModeBanner: false,
       theme: myTheme,
-      initialRoute: AppRoute.onBoarding,
+      initialRoute: AppRoute.splash,
       routes: routes,
     );
   }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:medhub/res/color.dart';
-import 'package:medhub/res/fonts.dart';
+import 'package:medhub/core/res/color.dart';
+import 'package:medhub/core/res/fonts.dart';
 
 final myTheme = ThemeData(
   useMaterial3: true,
