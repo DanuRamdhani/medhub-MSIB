@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:medhub/routes/routes.dart';
+import 'package:medhub/routes/routes_name.dart';
 import 'package:medhub/utils/theme.dart';
 
 Future<void> main() async {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       title: 'MedHub',
       debugShowCheckedModeBanner: false,
       theme: myTheme,
-      initialRoute: '/',
+      initialRoute: AppRoute.onBoarding,
       routes: routes,
     );
   }
