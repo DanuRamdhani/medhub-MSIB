@@ -9,4 +9,7 @@ final myTheme = ThemeData(
     primary: AppColor.primary,
   ),
   fontFamily: Fonts.overpass,
+  appBarTheme: AppBarTheme(
+    iconTheme: IconThemeData(color: AppColor.primary),
+  ),
 );

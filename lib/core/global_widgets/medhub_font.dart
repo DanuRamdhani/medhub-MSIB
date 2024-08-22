@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:medhub/core/res/color.dart';
 
 class MedhubFont extends StatelessWidget {
-  const MedhubFont({super.key});
+  const MedhubFont({super.key, this.fontWeight});
+
+  final FontWeight? fontWeight;
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +18,7 @@ class MedhubFont extends StatelessWidget {
         'MedHub',
         style: TextStyle(
           fontSize: 24,
-          fontWeight: FontWeight.w600,
+          fontWeight: fontWeight ?? FontWeight.w600,
           color: AppColor.primary,
         ),
       ),
