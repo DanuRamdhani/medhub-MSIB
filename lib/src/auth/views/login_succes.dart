@@ -13,35 +13,39 @@ class LoginSuccesPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 40),
+        padding: const EdgeInsets.symmetric(horizontal: 32).copyWith(bottom: 32),
         child: Stack(
           children: [
             Padding(
               padding: const EdgeInsets.all(24),
-              child: Column(
-                children: [
-                  Image.asset(check),
-                  const SizedBox(height: 54),
-                  Text(
-                    'Phone Number Verified',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.w700,
-                      color: AppColor.primary,
-                    ),
+              child: Center(
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      Image.asset(check),
+                      const SizedBox(height: 54),
+                      Text(
+                        'Phone Number Verified',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700,
+                          color: AppColor.primary,
+                        ),
+                      ),
+                      const SizedBox(height: 16),
+                      Text(
+                        'Congradulations, your phone number has been verified. You can start using the app',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w300,
+                          color: AppColor.fontGrey,
+                        ),
+                      ),
+                    ],
                   ),
-                  const SizedBox(height: 16),
-                  Text(
-                    'Congradulations, your phone number has been verified. You can start using the app',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w300,
-                      color: AppColor.fontGrey,
-                    ),
-                  ),
-                ],
+                ),
               ),
             ),
             Align(

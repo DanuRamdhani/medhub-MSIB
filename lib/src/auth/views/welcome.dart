@@ -16,72 +16,81 @@ class WelcomePage extends StatelessWidget {
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 32),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 14),
-              child: Column(
-                children: [
-                  Image.asset(welcome),
-                  const SizedBox(height: 32),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
+        child: Center(
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 14),
+                  child: Column(
                     children: [
-                      Text(
-                        'Welcome to ',
-                        style: TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.w700,
-                          color: AppColor.primary,
+                      Image.asset(welcome),
+                      const SizedBox(height: 32),
+                      RichText(
+                        textAlign: TextAlign.center,
+                        text: TextSpan(
+                          children: [
+                            TextSpan(
+                              text: 'Welcome to ',
+                              style: TextStyle(
+                                fontSize: 24,
+                                fontWeight: FontWeight.w700,
+                                color: AppColor.primary,
+                              ),
+                            ),
+                            const WidgetSpan(
+                              baseline: TextBaseline.alphabetic,
+                              alignment: PlaceholderAlignment.baseline,
+                              child: MedhubFont(
+                                fontWeight: FontWeight.w700,
+                              ),
+                            ),
+                          ],
                         ),
                       ),
-                      const MedhubFont(
-                        fontWeight: FontWeight.w700,
+                      const SizedBox(height: 16),
+                      Text(
+                        'Do you want some help with your health to get better life?',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w300,
+                          color: AppColor.fontGrey,
+                        ),
                       ),
                     ],
                   ),
-                  const SizedBox(height: 16),
-                  Text(
-                    'Do you want some help with your health to get better life?',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w300,
-                      color: AppColor.fontGrey,
-                    ),
+                ),
+                const SizedBox(height: 32),
+                MainButton(
+                  text: 'SIGN UP WITH EMAIL',
+                  onPressed: () {
+                    context.pushNamed(AppRoute.register);
+                  },
+                ),
+                const SizedBox(height: 10),
+                const SecondButton(
+                  image: facebook,
+                  text: 'CONTINUE WITH FACEBOOK',
+                ),
+                const SizedBox(height: 10),
+                const SecondButton(
+                  image: google,
+                  text: 'CONTINUE WITH GMAIL',
+                ),
+                const SizedBox(height: 8),
+                TextButton(
+                  style: TextButton.styleFrom(
+                    foregroundColor: AppColor.fontGrey,
                   ),
-                ],
-              ),
+                  onPressed: () {
+                    context.pushNamed(AppRoute.login);
+                  },
+                  child: const Text('LOGIN'),
+                ),
+              ],
             ),
-            const SizedBox(height: 32),
-            MainButton(
-              text: 'SIGN UP WITH EMAIL',
-              onPressed: () {
-                context.pushNamed(AppRoute.register);
-              },
-            ),
-            const SizedBox(height: 10),
-            const SecondButton(
-              image: facebook,
-              text: 'CONTINUE WITH FACEBOOK',
-            ),
-            const SizedBox(height: 10),
-            const SecondButton(
-              image: google,
-              text: 'CONTINUE WITH GMAIL',
-            ),
-            const SizedBox(height: 8),
-            TextButton(
-              style: TextButton.styleFrom(
-                foregroundColor: AppColor.fontGrey,
-              ),
-              onPressed: () {
-                context.pushNamed(AppRoute.login);
-              },
-              child: const Text('LOGIN'),
-            ),
-          ],
+          ),
         ),
       ),
     );

@@ -13,7 +13,7 @@ class OnBoardingBloc extends Bloc<OnBoardingEvent, OnBoardingState> {
     on<NextPageEvent>((event, emit) {
       final newIndex = state.currentIndex + 1;
       state.pageController.nextPage(
-        duration: const Duration(milliseconds: 300),
+        duration: const Duration(milliseconds: 800  ),
         curve: Curves.ease,
       );
       emit(state.copyWith(currentIndex: newIndex));

@@ -74,7 +74,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                     children: [
                       GestureDetector(
                         onTap: () {
-                          context.pushNamed(AppRoute.welcome);
+                          context.pushReplacementNamed(AppRoute.welcome);
                         },
                         child: Text(
                           'Skip',
@@ -94,7 +94,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                         onTap: () {
                           setState(() {
                             if (currentIndex == slides.length - 1) {
-                              context.pushNamed(AppRoute.welcome);
+                              context.pushReplacementNamed(AppRoute.welcome);
                             }
 
                             context.read<OnBoardingBloc>().add(NextPageEvent());
