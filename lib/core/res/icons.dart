@@ -26,3 +26,5 @@ const shopeepay = '$iconPath/shopeepay.png';
 const skinHair = '$iconPath/skin_hair.png';
 const user = '$iconPath/user.png';
 const wellness = '$iconPath/wellness.png';
+const notifAppbar = '$iconPath/notif_appbar_red.png';
+const chartAppbar = '$iconPath/chart_appbar.png';

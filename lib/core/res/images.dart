@@ -22,3 +22,9 @@ const product6 = '$imagePath/product6.png';
 const product7 = '$imagePath/product7.png';
 const product8 = '$imagePath/product8.png';
 const product9 = '$imagePath/product9.png';
+
+const bgBlue = '$imagePath/bg_blue.png';
+const adv = '$imagePath/adv.png';
+
+const sale = '$imagePath/sale.png';
+const discount = '$imagePath/discount.png';
