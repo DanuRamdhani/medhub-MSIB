@@ -11,7 +11,7 @@ class CustomCarousel extends StatefulWidget {
 
 class _CustomCarouselState extends State<CustomCarousel> {
   int currentIndex = 0;
-  PageController _pageController = PageController();
+  final PageController _pageController = PageController();
 
   @override
   Widget build(BuildContext context) {

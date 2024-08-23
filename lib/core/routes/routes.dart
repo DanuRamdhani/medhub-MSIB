@@ -6,6 +6,7 @@ import 'package:medhub/src/auth/views/verify_otp.dart';
 import 'package:medhub/src/auth/views/welcome.dart';
 import 'package:medhub/src/home/views/category.dart';
 import 'package:medhub/src/home/views/home.dart';
+import 'package:medhub/src/home/views/product_details.dart';
 import 'package:medhub/src/on_boarding/views/onboarding.dart';
 import 'package:medhub/src/splash/views/splash.dart';
 
@@ -19,4 +20,5 @@ final routes = {
   AppRoute.loginSuccess: (_) => const LoginSuccesPage(),
   AppRoute.home: (_) => const HomePage(),
   AppRoute.category: (_) => const CategoryPage(),
+  AppRoute.productDetails: (_) => const ProductDetailsPage(),
 };
