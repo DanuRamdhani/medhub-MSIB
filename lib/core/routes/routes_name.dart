@@ -6,6 +6,7 @@ class AppRoute {
   static const register = '/register';
   static const verifyOtp = '/verify-otp';
   static const loginSuccess = '/login-success';
+  static const mainWrapper = '/main-wrapper';
   static const home = '/home';
   static const category = '/category';
   static const productDetails = '/product-details';

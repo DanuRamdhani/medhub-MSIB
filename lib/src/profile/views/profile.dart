@@ -28,6 +28,13 @@ class ProfilePage extends StatelessWidget {
                 children: [
                   Container(
                     decoration: BoxDecoration(
+                      boxShadow: const [
+                        BoxShadow(
+                          color: Color(0x19000000),
+                          blurRadius: 4,
+                          offset: Offset(0, 4),
+                        ),
+                      ],
                       border: Border.all(
                         color: AppColor.whiteBg,
                         width: 2,
@@ -35,6 +42,7 @@ class ProfilePage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(100),
                     ),
                     child: const CircleAvatar(
+                      radius: 36,
                       backgroundImage: AssetImage(people),
                     ),
                   ),

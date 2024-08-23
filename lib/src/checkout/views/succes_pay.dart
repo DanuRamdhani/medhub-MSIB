@@ -53,7 +53,7 @@ class SuccesPayPage extends StatelessWidget {
               child: MainButton(
                 text: 'Continue Order',
                 onPressed: () {
-                  context.pushReplacementNamed(AppRoute.home);
+                  context.pushReplacementNamed(AppRoute.mainWrapper);
                 },
               ),
             ),

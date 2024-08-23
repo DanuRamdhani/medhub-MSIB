@@ -52,7 +52,7 @@ class LoginPage extends StatelessWidget {
                             value.trim().length < 4) {
                           return 'masukan lebih dari 4 karakter';
                         }
-          
+
                         return null;
                       },
                     ),
@@ -98,7 +98,10 @@ class LoginPage extends StatelessWidget {
                     MainButton(
                       text: 'SIGN IN',
                       onPressed: () {
-                        context.pushNamed(AppRoute.home);
+                        Navigator.of(context).pushNamedAndRemoveUntil(
+                          AppRoute.mainWrapper,
+                          (route) => route.settings.name == AppRoute.onBoarding,
+                        );
                       },
                     ),
                   ],

@@ -19,7 +19,7 @@ class _ChekchoutPageState extends State<ChekchoutPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Your Cart'),
+        title: const Text('Your Checkout'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(24).copyWith(top: 0),
@@ -131,7 +131,7 @@ class _ChekchoutPageState extends State<ChekchoutPage> {
                 onPressed: () {
                   Navigator.of(context).pushNamedAndRemoveUntil(
                     AppRoute.successPay,
-                    (route) => route.settings.name == AppRoute.home,
+                    (route) => route.settings.name == AppRoute.mainWrapper,
                   );
                 },
               ),

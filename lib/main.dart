@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
       title: 'MedHub',
       debugShowCheckedModeBanner: false,
       theme: myTheme,
-      initialRoute: AppRoute.myProfile,
+      initialRoute: AppRoute.splash,
       routes: routes,
     );
   }

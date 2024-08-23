@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:medhub/core/global_widgets/main_button.dart';
-import 'package:medhub/core/helper/context_extension.dart';
 import 'package:medhub/core/res/color.dart';
 import 'package:medhub/core/res/icons.dart';
 import 'package:medhub/core/routes/routes_name.dart';
@@ -13,7 +12,8 @@ class LoginSuccesPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 32).copyWith(bottom: 32),
+        padding:
+            const EdgeInsets.symmetric(horizontal: 32).copyWith(bottom: 32),
         child: Stack(
           children: [
             Padding(
@@ -53,7 +53,10 @@ class LoginSuccesPage extends StatelessWidget {
               child: MainButton(
                 text: 'CONTINUE',
                 onPressed: () {
-                  context.pushReplacementNamed(AppRoute.home);
+                  Navigator.of(context).pushNamedAndRemoveUntil(
+                    AppRoute.mainWrapper,
+                    (route) => route.settings.name == AppRoute.onBoarding,
+                  );
                 },
               ),
             ),
