@@ -11,5 +11,10 @@ final myTheme = ThemeData(
   fontFamily: Fonts.overpass,
   appBarTheme: AppBarTheme(
     iconTheme: IconThemeData(color: AppColor.primary),
+    titleTextStyle: const TextStyle(
+      fontSize: 16,
+      fontWeight: FontWeight.w700,
+      color: Colors.black,
+    ),
   ),
 );

@@ -5,8 +5,8 @@ import 'package:medhub/core/res/color.dart';
 import 'package:medhub/core/res/icons.dart';
 import 'package:medhub/core/res/images.dart';
 import 'package:medhub/core/routes/routes_name.dart';
-import 'package:medhub/src/home/widgets/rating.dart';
-import 'package:medhub/src/home/widgets/review.dart';
+import 'package:medhub/src/product_details/widgets/rating.dart';
+import 'package:medhub/src/product_details/widgets/review.dart';
 import 'package:medhub/src/on_boarding/widgets/dot_page.dart';
 
 class ProductDetailsPage extends StatefulWidget {

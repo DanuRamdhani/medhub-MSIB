@@ -28,3 +28,4 @@ const user = '$iconPath/user.png';
 const wellness = '$iconPath/wellness.png';
 const notifAppbar = '$iconPath/notif_appbar_red.png';
 const chartAppbar = '$iconPath/chart_appbar.png';
+const label = '$iconPath/label.png';

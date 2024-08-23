@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:medhub/src/home/models/product.dart';
 import 'package:medhub/src/home/widgets/offers_content.dart';
 import 'package:medhub/src/home/widgets/product_card.dart';
-import 'package:medhub/src/home/widgets/products_small_items.dart';
+import 'package:medhub/src/category/widgets/products_small_items.dart';
 
 class CategoryPage extends StatelessWidget {
   const CategoryPage({super.key});
