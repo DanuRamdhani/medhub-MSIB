@@ -31,43 +31,45 @@ class _OnboardingPageState extends State<OnboardingPage> {
 
             return Stack(
               children: [
-                SingleChildScrollView(
-                  child: PageView.builder(
-                    itemCount: slides.length,
-                    physics: const NeverScrollableScrollPhysics(),
-                    controller: pageController,
-                    onPageChanged: (index) {
-                      context.read<OnBoardingBloc>().add(PageChangedEvent(index));
-                    },
-                    itemBuilder: (context, index) {
-                      return Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset(slides[index].image),
-                          const SizedBox(height: 40),
-                          Text(
-                            slides[index].title,
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontSize: 24,
-                              fontWeight: FontWeight.w700,
-                              color: AppColor.primary,
+                PageView.builder(
+                  itemCount: slides.length,
+                  physics: const NeverScrollableScrollPhysics(),
+                  controller: pageController,
+                  onPageChanged: (index) {
+                    context.read<OnBoardingBloc>().add(PageChangedEvent(index));
+                  },
+                  itemBuilder: (context, index) {
+                    return Center(
+                      child: SingleChildScrollView(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(slides[index].image),
+                            const SizedBox(height: 40),
+                            Text(
+                              slides[index].title,
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize: 24,
+                                fontWeight: FontWeight.w700,
+                                color: AppColor.primary,
+                              ),
                             ),
-                          ),
-                          const SizedBox(height: 16),
-                          Text(
-                            slides[index].description,
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.w300,
-                              color: AppColor.fontGrey,
+                            const SizedBox(height: 16),
+                            Text(
+                              slides[index].description,
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w300,
+                                color: AppColor.fontGrey,
+                              ),
                             ),
-                          ),
-                        ],
-                      );
-                    },
-                  ),
+                          ],
+                        ),
+                      ),
+                    );
+                  },
                 ),
                 Align(
                   alignment: Alignment.bottomCenter,
